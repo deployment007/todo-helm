@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-add-task
 spec:
   selector:
-    {{ .Release.Name }}-add-task
+    app: {{ .Release.Name }}-add-task
   ports:
     - port: {{ .Values.add-task.servicePort }}
       targetPort: {{ .Values.add-task.port }}

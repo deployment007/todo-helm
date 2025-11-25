@@ -4,7 +4,7 @@ metadata:
   name: {{ .Release.Name }}-ui
 spec:
   selector:
-    {{ .Release.Name }}-ui
+    app: {{ .Release.Name }}-ui
   ports:
     - port: {{ .Values.ui.servicePort }}
       targetPort: {{ .Values.ui.port }}
