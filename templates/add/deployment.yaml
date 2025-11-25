@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}-add-task
 spec:
-  replicas: {{ .Values.add-task.replicaCount }}
+  replicas: {{ .Values.addTask.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-add-task
@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-add-task
-        image: {{ .Values.common.acrURL }}/{{ .Values.add-task.image.name }}/{{ .Values.add-task.image.tag }}
+        image: {{ .Values.common.acrURL }}/{{ .Values.addTask.image.name }}/{{ .Values.addTask.image.tag }}
         ports:
-        - containerPort: {{ .Values.add-task.port }}
+        - containerPort: {{ .Values.addTask.port }}
         env:
         - name: CONNECTION_STRING
           value: {{ .Values.common.connectionString }}

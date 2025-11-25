@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}-get-task
 spec:
-  replicas: {{ .Values.get-task.replicaCount }}
+  replicas: {{ .Values.getTask.replicaCount }}
   selector:
     matchLabels:
       app: {{ .Release.Name }}-get-task
@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-get-task
-        image: {{ .Values.common.acrURL }}/{{ .Values.get-task.image.name }}/{{ .Values.get-task.image.tag }}
+        image: {{ .Values.common.acrURL }}/{{ .Values.getTask.image.name }}/{{ .Values.getTask.image.tag }}
         ports:
-        - containerPort: {{ .Values.get-task.port }}
+        - containerPort: {{ .Values.getTask.port }}
         env:
         - name: CONNECTION_STRING
           value: {{ .Values.common.connectionString }}

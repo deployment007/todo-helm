@@ -6,6 +6,6 @@ spec:
   selector:
     app: {{ .Release.Name }}-get-task
   ports:
-    - port: {{ .Values.get-task.servicePort }}
-      targetPort: {{ .Values.get-task.port }}
+    - port: {{ .Values.getTask.servicePort }}
+      targetPort: {{ .Values.getTask.port }}
   type: ClusterIP

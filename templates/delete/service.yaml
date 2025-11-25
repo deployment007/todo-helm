@@ -6,6 +6,6 @@ spec:
   selector:
     app: {{ .Release.Name }}-delete-task
   ports:
-    - port: {{ .Values.delete-task.servicePort }}
-      targetPort: {{ .Values.delete-task.port }}
+    - port: {{ .Values.deleteTask.servicePort }}
+      targetPort: {{ .Values.deleteTask.port }}
   type: ClusterIP

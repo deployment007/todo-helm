@@ -5,13 +5,13 @@ metadata:
 spec:
   ingressClassName: {{ .Values.common.ingressClassName }}
   rules:
-  - host: {{ .Values.get-task.ingress.host }}
+  - host: {{ .Values.getTask.ingress.host }}
     http:
         paths:
-        - path: "/"
+          - path: "/"
             pathType: Prefix
             backend:
-            service:
-                name: {{ .Release.Name }}-get-task
-                port:
-                  number: {{ .Values.get-task.servicePort }}
+                service:
+                    name: {{ .Release.Name }}-get-task
+                    port:
+                    number: {{ .Values.getTask.servicePort }}

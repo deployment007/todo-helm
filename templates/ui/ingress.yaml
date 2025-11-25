@@ -8,10 +8,10 @@ spec:
   - host: {{ .Values.ui.ingress.host }}
     http:
         paths:
-        - path: "/"
+          - path: "/"
             pathType: Prefix
             backend:
-            service:
-                name: {{ .Release.Name }}-ui
-                port:
-                  number: {{ .Values.ui.servicePort }}
+                service:
+                    name: {{ .Release.Name }}-ui
+                    port:
+                    number: {{ .Values.ui.servicePort }}
