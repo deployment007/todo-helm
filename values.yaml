@@ -18,7 +18,7 @@ addTask:
   image:
     name: add-task
     tag: v1.0
-  port: 80
+  port: 8000
   servicePort: 80
   ingress:
     host: add-task.achinta.site   
@@ -28,7 +28,7 @@ getTask:
   image:
     name: get-task
     tag: v1.0
-  port: 80
+  port: 8000
   servicePort: 80
   ingress:
     host: get-task.achinta.site   
@@ -38,7 +38,7 @@ deleteTask:
   image:
     name: delete-task
     tag: v1.0
-  port: 80
+  port: 8000
   servicePort: 80
   ingress:
     host: delete-task.achinta.site   
