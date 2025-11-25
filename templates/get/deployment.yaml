@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}-get-task
+spec:
+  replicas: {{ .Values.get-task.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-get-task
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-get-task
+    spec:
+      containers:
+      - name: {{ .Release.Name }}-get-task
+        image: {{ .Values.common.acrURL }}/{{ .Values.get-task.image.name }}/{{ .Values.get-task.image.tag }}
+        ports:
+        - containerPort: {{ .Values.get-task.port }}
+        env:
+        - name: CONNECTION_STRING
+          value: {{ .Values.common.connectionString }}

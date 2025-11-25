@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-get-task
+spec:
+  ingressClassName: {{ .Values.common.ingressClassName }}
+  rules:
+  - host: {{ .Values.get-task.ingress.host }}
+    http:
+        paths:
+        - path: "/"
+            pathType: Prefix
+            backend:
+            service:
+                name: {{ .Release.Name }}-get-task
+                port:
+                  number: {{ .Values.get-task.servicePort }}
