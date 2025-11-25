@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-get-task
-        image: {{ .Values.common.acrURL }}/{{ .Values.getTask.image.name }}/{{ .Values.getTask.image.tag }}
+        image: {{ .Values.common.acrURL }}/{{ .Values.getTask.image.name }}:{{ .Values.getTask.image.tag }}
         ports:
         - containerPort: {{ .Values.getTask.port }}
         env:

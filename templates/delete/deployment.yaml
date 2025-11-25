@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: {{ .Release.Name }}-delete-task
-        image: {{ .Values.common.acrURL }}/{{ .Values.deleteTask.image.name }}/{{ .Values.deleteTask.image.tag }}
+        image: {{ .Values.common.acrURL }}/{{ .Values.deleteTask.image.name }}:{{ .Values.deleteTask.image.tag }}
         ports:
         - containerPort: {{ .Values.deleteTask.port }}
         env:
