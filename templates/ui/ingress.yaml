@@ -14,4 +14,4 @@ spec:
                 service:
                     name: {{ .Release.Name }}-ui
                     port:
-                    number: {{ .Values.ui.servicePort }}
+                      number: {{ .Values.ui.servicePort }}
