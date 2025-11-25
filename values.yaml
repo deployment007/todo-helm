@@ -7,7 +7,7 @@ ui:
   replicaCount: 3
   image:
     name: ui
-    tag: 1.0
+    tag: v1.0
   port: 80
   servicePort: 80
   ingress:
@@ -17,7 +17,7 @@ addTask:
   replicaCount: 3
   image:
     name: add-task
-    tag: 1.0
+    tag: v1.0
   port: 80
   servicePort: 80
   ingress:
@@ -27,7 +27,7 @@ getTask:
   replicaCount: 3
   image:
     name: get-task
-    tag: 1.0
+    tag: v1.0
   port: 80
   servicePort: 80
   ingress:
@@ -37,7 +37,7 @@ deleteTask:
   replicaCount: 3
   image:
     name: delete-task
-    tag: 1.0
+    tag: v1.0
   port: 80
   servicePort: 80
   ingress:
