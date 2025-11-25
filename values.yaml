@@ -1,5 +1,5 @@
 common:
-  ingressClassName: azure-application-gateway
+  ingressClassName: azure/application-gateway
   acrURL: heroacr007.azurecr.io/todo
   connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:heromssqlserver007.database.windows.net,1433;Database=heromssqldb007;Uid=achinta;Pwd=Raju@834068;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
 
