@@ -1,0 +1,44 @@
+common:
+  ingressClassName: azure-application-gateway
+  acrURL: heroacr007.azurecr.io/todo
+  connectionString: "Driver={ODBC Driver 18 for SQL Server};Server=tcp:heromssqlserver007.database.windows.net,1433;Database=heromssqldb007;Uid=achinta;Pwd=Raju@834068;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+
+ui:
+  replicaCount: 3
+  image:
+    name: ui
+    tag: 1.0
+  port: 80
+  servicePort: 80
+  ingress:
+    host: ui.achinta.site
+    
+addTask:
+  replicaCount: 3
+  image:
+    name: add-task
+    tag: 1.0
+  port: 80
+  servicePort: 80
+  ingress:
+    host: add-task.achinta.site   
+
+getTask:
+  replicaCount: 3
+  image:
+    name: get-task
+    tag: 1.0
+  port: 80
+  servicePort: 80
+  ingress:
+    host: get-task.achinta.site   
+
+deleteTask:
+  replicaCount: 3
+  image:
+    name: delete-task
+    tag: 1.0
+  port: 80
+  servicePort: 80
+  ingress:
+    host: delete-task.achinta.site   
