@@ -2,9 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-get-task
-  annotations:
-    kubernetes.io/ingress.class: {{ .Values.common.ingressClassName }}
 spec:
+  ingressClassName: {{ .Values.common.ingressClassName }}
   rules:
   - host: {{ .Values.getTask.ingress.host }}
     http:

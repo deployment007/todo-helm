@@ -2,9 +2,8 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Release.Name }}-ui
-  annotations:
-    kubernetes.io/ingress.class: {{ .Values.common.ingressClassName }}
 spec:
+  ingressClassName: {{ .Values.common.ingressClassName }}
   rules:
   - host: {{ .Values.ui.ingress.host }}
     http:
